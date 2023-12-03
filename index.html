@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>HTML + CSS</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div id="all">
+      <form id="search_form">
+        <input
+          type="search"
+          required=""
+          placeholder="Enter a city"
+          id="search_bar"
+        />
+        <input type="submit" value="Search" id="search_btn" />
+      </form>
+      <div id="t_all">
+        <div id="text">
+          <div id="text1">
+            <h1 id="city">Paris</h1>
+            <span id="time"> Monday 22:45,light rain</span><br />
+            Humidity:
+            <strong id="humidity"> 96%</strong>
+            , Wind:
+            <strong id="wind"> 5.14km/h </strong>
+          </div>
+        </div>
+        <div id="container">
+          <div id="degree">9</div>
+          <span id="c">°C</span>
+          <img
+            src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-night.png"
+            id="icon"
+          />
+        </div>
+      </div>
+
+      <br />
+      <br />
+      <br />
+      <footer>
+        This project was coded by Noe Noe,
+        <a href="#">is open-sourced on Github</a>
+        and <a href="#"> hosted on Netlify </a>
+      </footer>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
