@@ -1,18 +1,38 @@
 function UpdateWeather(response){
   let updateTemp= document.querySelector("#degree");
-  updateTemp.innerHTML=Math.round(response.data.main.temp);
+  updateTemp.innerHTML=Math.round(response.data.temperature.current);
+
   let updateDes= document.querySelector("#des");
-  updateDes.innerHTML=response.data.weather[0].description;
+  updateDes.innerHTML=response.data.condition.description;
+
   let updateHumidity= document.querySelector("#humidity");
-  updateHumidity.innerHTML=response.data.main.humidity;
+  updateHumidity.innerHTML=response.data.temperature.humidity;
+
   let updateWind= document.querySelector("#wind");
   updateWind.innerHTML=response.data.wind.speed;
+
   let updateIcon= document.querySelector("#icon");
-  updateIcon.innerHTML=response.data.weather[0].icon;
+  updateIcon.innerHTML=`<img src="${response.data.condition.icon_url}"/>`;
+
+  let updateDate=document.querySelector("#time");
+  let date= new Date(response.data.time*1000);
+  updateDate.innerHTML=formatDate(date);
+  
 }
+function formatDate(date){
+  
+  let hour=date.getHours();
+  let minute= date.getMinutes();
+  let days=["Monday", "Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+  let day= days[date.getDay()];
+  return `${day} ${hour} : ${minute},`;
+
+
+}
+
 function search_city(city){
-  let apiKey="995876feccff84467560f64d2dabfe70";
-  let apiURL=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  let apiKey="6e08c92a3e7709389fe54b43c09eo88t";
+  let apiURL=`https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
   console.log(apiURL);
   axios.get(apiURL).then(UpdateWeather);
 }
