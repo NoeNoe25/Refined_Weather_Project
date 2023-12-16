@@ -46,3 +46,24 @@ function search_handle(event) {
   let search = document.querySelector("#search_form");
   search.addEventListener("click", search_handle);
   
+
+  function forecast(){
+    let days=["Tue","Wed","Thurs","Fri","Sat"];
+    let forecast_html="";
+    days.forEach(function(day){
+      forecast_html=forecast_html+ `   <div class="weather_forecast1">
+      <div class="forecast_day"> ${day} </div>
+      <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png" class="forecast_icon">
+      <div class="weather_temp">
+      <div class="forecast_temp_max"> <strong> 19° </strong></div>
+      <div class="forecast_temp_min"> 16° </div>
+    </div>
+    </div>
+    `;
+
+    });
+    let forecast_element=document.querySelector("#forecast");
+  forecast_element.innerHTML=forecast_html;
+  }
+  
+  forecast();
