@@ -18,6 +18,15 @@ function UpdateWeather(response){
   let date= new Date(response.data.time*1000);
   updateDate.innerHTML=formatDate(date);
   forecast_data(response.data.city);
+  Change_bg(response.data.condition.description) ;
+  
+ 
+}
+function Change_bg(des){
+  let updateBG=document.querySelector("#all");
+  if(des=="few clouds"){
+    updateBG.style.background= "linear-gradient(180.3deg, rgb(110, 136, 161) 5.5%, rgb(221, 221, 221) 90.2%)";
+  }
 }
 function formatDate(date){
   
