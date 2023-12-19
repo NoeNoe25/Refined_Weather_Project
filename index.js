@@ -30,7 +30,7 @@ function Change_bg(des){
     updateBG.style.color= "#e0ebeb";
    
   }
-  else if (des=="clear sky" || des=="light rain"){
+  else if (des=="clear sky" ){
     updateBG.style.background= "linear-gradient(180.3deg, rgb(85, 88, 218) 0%, rgb(95, 209, 249) 100.2%)";
     updateBG.style.color= "#e0ebeb";
   }
@@ -38,9 +38,9 @@ function Change_bg(des){
     updateBG.style.background= "linear-gradient(359.3deg,  rgba(187, 187, 187, 0) 1%, rgb(196, 214, 252) 70.9%)";
     updateBG.style.color= " rgb(85, 88, 218)";
   }
-  else if (des=="scattered clouds" || des=="overcast clouds"){
-    updateBG.style.background= "background: linear-gradient(109.6deg, rgb(204, 228, 247) 11.2%, rgb(237, 246, 250) 100.2%); ";
-     updateBG.style.color= " #e0ebeb";
+  else if (des=="scattered clouds" ){
+    updateBG.style.background= "background: radial-gradient(401px at 50.6% -0.3%, rgba(255, 255, 255, 0.31) 1.2%, rgb(36, 212, 219) 100.2%)";
+    updateBG.style.color= " #e0ebeb";
     
   }
   else if (des=="shower rain"){
