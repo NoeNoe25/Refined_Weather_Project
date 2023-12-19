@@ -38,8 +38,8 @@ function Change_bg(des){
     updateBG.style.background= "linear-gradient(359.3deg,  rgba(187, 187, 187, 0) 1%, rgb(196, 214, 252) 70.9%)";
     updateBG.style.color= " rgb(85, 88, 218)";
   }
-  else if (des=="scattered clouds" ){
-    updateBG.style.background= "background: radial-gradient(401px at 50.6% -0.3%, rgba(255, 255, 255, 0.31) 1.2%, rgb(36, 212, 219) 100.2%)";
+  else if (des=="scattered clouds" || des=="overcast clouds" ){
+    updateBG.style.background= "background: radial-gradient(401px at 50.6% -0.3%, rgba(255, 255, 255, 0.31) 1.2%, rgb(36, 212, 219) 100.2%); ";
     updateBG.style.color= " #e0ebeb";
     
   }
