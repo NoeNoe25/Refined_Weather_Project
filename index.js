@@ -18,18 +18,17 @@ function UpdateWeather(response){
   let date= new Date(response.data.time*1000);
   updateDate.innerHTML=formatDate(date);
   forecast_data(response.data.city);
-  Change_bg(response.data.condition.description) ;
+  Change_bg(response.data.condition.description);
   
  
 }
 function Change_bg(des){
   let updateBG=document.querySelector("#all");
-  let updateFont=document.querySelectorAll(".forecast_temp_max");
 
   if(des=="rains"){
     updateBG.style.background= "linear-gradient(180.3deg, rgb(110, 136, 161) 5.5%, rgb(221, 221, 221) 90.2%)";
     updateBG.style.color= "#e0ebeb";
-    updateFont.style.color= "black";
+   
   }
   else if (des=="clear sky"){
     updateBG.style.background= "linear-gradient(180.3deg, rgb(85, 88, 218) 0%, rgb(95, 209, 249) 100.2%)";
@@ -40,9 +39,9 @@ function Change_bg(des){
     updateBG.style.color= " rgb(85, 88, 218)";
   }
   else if (des=="scattered clouds"){
-    let imgURL=" https://s3.amazonaws.com/shecodesio-production/upoads/files/000/107/714/original/Blue_Green_Illustrated_House_and_Rain_Desktop_Wallpaper_%28700_x_700_px%29%282%29.png?1702929884"
-    updateBG.style.backgroundImage= `url(${imgURL})`;
+    updateBG.style.background= "linear-gradient(-225deg, #5D9FFF 0%, #B8DCFF 48%, #6BBBFF 100%); ";
      updateBG.style.color= " #e0ebeb";
+    
   }
   else if (des=="shower rain"){
     updateBG.style.background= "linear-gradient(to bottom,  #304352 0%, #d7d2cc 100%)";
@@ -107,7 +106,7 @@ function search_handle(event) {
     response.data.daily.forEach(function(day,index){
       if(index<5){
       forecast_html=forecast_html+ `   <div class="weather_forecast1">
-      <div class="forecast_day"> ${Date_Format(day.time)} </div>
+      <div class="forecast_day" > ${Date_Format(day.time)} </div>
       <img src="${day.condition.icon_url}" class="forecast_icon">
       <div class="weather_temp">
       <div class="forecast_temp_max" style="color:#f65282"> <strong> ${Math.round(day.temperature.maximum)}° </strong></div>

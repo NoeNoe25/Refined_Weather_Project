@@ -1,5 +1,5 @@
 #search_bar {
-    background-color: #f9f7fe;
+    background-color:#a7bcb9;
     border: none;
     border-radius: 6px;
     width: 80%;
@@ -8,12 +8,17 @@
   }
   #search_btn {
     padding: 15px 30px;
-    background-color: #DDC3A5;
+    background-color:#24527a;
     border: none;
     font-size: 16px;
     margin-left: 5px;
     border-radius: 6px;
     color: white;
+  }
+
+  #search_btn:hover{
+    background-color: #5dacbd;
+    box-shadow: 11px 10px 20px rgba(0, 0, 0, 0.2);
   }
   #all {
     margin: 45px auto;
