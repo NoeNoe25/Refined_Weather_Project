@@ -20,7 +20,8 @@
     padding: 30px;
     
     border-radius: 16px;
-    max-width: 600px;
+    max-width: 700px;
+    max-height: 700px;
     box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
     color:#e0ebeb;
     font-family: Helvetica, sans-serif;
@@ -60,6 +61,7 @@
   }
   footer {
     text-align: center;
+    color: #5c5757;
   }
   .weather_forecast{
     display: flex;
@@ -71,7 +73,7 @@
   }
   .forecast_day{
     text-align: center;
-  color: rgba(39, 33, 66, 0.4);
+  color:rgba(39, 33, 66, 0.4);
   font-size: 16px;
   line-height: 20px;
   margin-bottom: 10px;
@@ -82,7 +84,5 @@
     display: block;
     margin:0 auto;
   }
-  #all.few-clouds {
-    background-color: linear-gradient(180.3deg, rgb(110, 136, 161) 5.5%, rgb(221, 221, 221) 90.2%);
-    /* Additional styles if needed */
-  }
+ 
+  
