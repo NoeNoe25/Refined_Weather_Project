@@ -24,7 +24,7 @@ function UpdateWeather(response){
  
 }
 
-function Change_bg(des){
+/*function Change_bg(des){
 
 let updateBG=document.querySelector("#all");
   if(des=="rains" ){
@@ -69,11 +69,13 @@ let updateBG=document.querySelector("#all");
     updateBG.style.color= " #e0ebeb";
 
   }
-}
+} */
 
 function Change_bg_sw(des){
+  let updateBG=document.querySelector("#all");
  switch(des){
-  case "rains" || "light rain":
+  case "rains":
+  case "light rain":
     updateBG.style.background= "linear-gradient(180.3deg, rgb(110, 136, 161) 5.5%, rgb(221, 221, 221) 90.2%)";
     updateBG.style.color= "#e0ebeb";
     break;
@@ -93,7 +95,8 @@ function Change_bg_sw(des){
     updateBG.style.background= "linear-gradient(to bottom, rgb(58, 28, 113), rgb(215, 109, 119), rgb(255, 175, 123))";
       updateBG.style.color= " #e0ebeb";
     break;
-  case "snow" || "light snow":
+  case "snow":
+  case "light snow":
     updateBG.style.background= "linear-gradient(180.3deg, #D7FFFE 0%, #FFFEFF 100%)";
     updateBG.style.color= " #407088";
     break;
@@ -104,7 +107,8 @@ function Change_bg_sw(des){
   case"few clouds":
     updateBG.style.background= "linear-gradient(-225deg, #5D9FFF 0%, #B8DCFF 48%, #6BBBFF 100%)";
     updateBG.style.color= " #38598b";
-  case "scattered clouds" || "overcast clouds":
+  case "scattered clouds":
+  case "overcast clouds":
     updateBG.style.background= "background: radial-gradient(401px at 50.6% -0.3%, rgba(255, 255, 255, 0.31) 1.2%, rgb(36, 212, 219) 100.2%)";
       updateBG.style.color= " #e0ebeb";
 }
