@@ -24,8 +24,47 @@ function UpdateWeather(response){
 }
 function Change_bg(des){
   let updateBG=document.querySelector("#all");
-  if(des=="few clouds"){
+  let updateFont=document.querySelectorAll(".forecast_temp_max");
+
+  if(des=="rains"){
     updateBG.style.background= "linear-gradient(180.3deg, rgb(110, 136, 161) 5.5%, rgb(221, 221, 221) 90.2%)";
+    updateBG.style.color= "#e0ebeb";
+    updateFont.style.color= "black";
+  }
+  else if (des=="clear sky"){
+    updateBG.style.background= "linear-gradient(180.3deg, rgb(85, 88, 218) 0%, rgb(95, 209, 249) 100.2%)";
+    updateBG.style.color= "#e0ebeb";
+  }
+  else if (des=="broken clouds"){
+    updateBG.style.background= "linear-gradient(359.3deg,  rgba(187, 187, 187, 0) 1%, rgb(196, 214, 252) 70.9%)";
+    updateBG.style.color= " rgb(85, 88, 218)";
+  }
+  else if (des=="scattered clouds"){
+    let imgURL=" https://s3.amazonaws.com/shecodesio-production/upoads/files/000/107/714/original/Blue_Green_Illustrated_House_and_Rain_Desktop_Wallpaper_%28700_x_700_px%29%282%29.png?1702929884"
+    updateBG.style.backgroundImage= `url(${imgURL})`;
+     updateBG.style.color= " #e0ebeb";
+  }
+  else if (des=="shower rain"){
+    updateBG.style.background= "linear-gradient(to bottom,  #304352 0%, #d7d2cc 100%)";
+    updateBG.style.color= " #e0ebeb";
+    
+  }
+  else if (des=="thunderstorm"){
+    updateBG.style.background= "linear-gradient(to bottom, rgb(58, 28, 113), rgb(215, 109, 119), rgb(255, 175, 123))";
+    updateBG.style.color= " #e0ebeb";
+    
+  }
+  else if (des=="snow"){
+    updateBG.style.background= "linear-gradient(180.3deg, #D7FFFE 0%, #FFFEFF 100%)";
+    updateBG.style.color= " #407088";
+  }
+  else if (des=="mist"){
+    updateBG.style.background= "linear-gradient(180.3deg, rgb(216, 174, 211) 45.1%, rgb(145, 130, 196) 100.2%)";
+    updateBG.style.color= " #e0ebeb";
+  }
+  else if (des=="few clouds"){
+    updateBG.style.background= "linear-gradient(-225deg, #5D9FFF 0%, #B8DCFF 48%, #6BBBFF 100%)";
+    updateBG.style.color= " #38598b";
   }
 }
 function formatDate(date){
@@ -71,8 +110,8 @@ function search_handle(event) {
       <div class="forecast_day"> ${Date_Format(day.time)} </div>
       <img src="${day.condition.icon_url}" class="forecast_icon">
       <div class="weather_temp">
-      <div class="forecast_temp_max"> <strong> ${Math.round(day.temperature.maximum)}° </strong></div>
-      <div class="forecast_temp_min">  ${Math.round(day.temperature.minimum)}° </div>
+      <div class="forecast_temp_max" style="color:#f65282"> <strong> ${Math.round(day.temperature.maximum)}° </strong></div>
+      <div class="forecast_temp_min" style="color:#ffb6b9">  ${Math.round(day.temperature.minimum)}° </div>
     </div>
     </div>
     `;
