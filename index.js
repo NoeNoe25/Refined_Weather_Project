@@ -39,7 +39,7 @@ function Change_bg(des){
     updateBG.style.color= " rgb(85, 88, 218)";
   }
   else if (des=="scattered clouds" || des=="overcast clouds" ){
-    updateBG.style.background= "background: radial-gradient(401px at 50.6% -0.3%, rgba(255, 255, 255, 0.31) 1.2%, rgb(36, 212, 219) 100.2%); ";
+    updateBG.style.background= "background: radial-gradient(401px at 50.6% -0.3%, rgba(255, 255, 255, 0.31) 1.2%, rgb(36, 212, 219) 100.2%)";
     updateBG.style.color= " #e0ebeb";
     
   }
