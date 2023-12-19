@@ -38,11 +38,7 @@ function Change_bg(des){
     updateBG.style.background= "linear-gradient(359.3deg,  rgba(187, 187, 187, 0) 1%, rgb(196, 214, 252) 70.9%)";
     updateBG.style.color= " rgb(85, 88, 218)";
   }
-  else if (des=="scattered clouds" || des=="overcast clouds" ){
-    updateBG.style.background= "background: radial-gradient(401px at 50.6% -0.3%, rgba(255, 255, 255, 0.31) 1.2%, rgb(36, 212, 219) 100.2%)";
-    updateBG.style.color= " #e0ebeb";
-    
-  }
+  
   else if (des=="shower rain"){
     updateBG.style.background= "linear-gradient(to bottom,  #304352 0%, #d7d2cc 100%)";
     updateBG.style.color= " #e0ebeb";
@@ -64,6 +60,12 @@ function Change_bg(des){
   else if (des=="few clouds"){
     updateBG.style.background= "linear-gradient(-225deg, #5D9FFF 0%, #B8DCFF 48%, #6BBBFF 100%)";
     updateBG.style.color= " #38598b";
+  }
+
+  else{
+    updateBG.style.background= "background: radial-gradient(401px at 50.6% -0.3%, rgba(255, 255, 255, 0.31) 1.2%, rgb(36, 212, 219) 100.2%)";
+    updateBG.style.color= " #e0ebeb";
+
   }
 }
 function formatDate(date){
