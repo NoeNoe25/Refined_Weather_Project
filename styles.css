@@ -1,5 +1,5 @@
 #search_bar {
-    background-color:#a7bcb9;
+    background-color:#f2f2f2;
     border: none;
     border-radius: 6px;
     width: 80%;
@@ -17,7 +17,7 @@
   }
 
   #search_btn:hover{
-    background-color: #5dacbd;
+    background-color: #a7bcb9;
     box-shadow: 11px 10px 20px rgba(0, 0, 0, 0.2);
   }
   #all {
@@ -66,7 +66,7 @@
   }
   footer {
     text-align: center;
-    color: #5c5757;
+    color: rgba(39, 33, 66, 0.4);
   }
   .weather_forecast{
     display: flex;
