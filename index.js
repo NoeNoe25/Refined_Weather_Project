@@ -18,15 +18,15 @@ function UpdateWeather(response){
   let date= new Date(response.data.time*1000);
   updateDate.innerHTML=formatDate(date);
   forecast_data(response.data.city);
-  
-  Change_bg_sw(response.data.condition.description);
+
+  Change_bg(response.data.condition.description);
   
  
 }
 
-/*function Change_bg(des){
+function Change_bg(des){
 
-let updateBG=document.querySelector("#all");
+  let updateBG=document.querySelector("#all");
   if(des=="rains" ){
     updateBG.style.background= "linear-gradient(180.3deg, rgb(110, 136, 161) 5.5%, rgb(221, 221, 221) 90.2%)";
     updateBG.style.color= "#e0ebeb";
@@ -69,50 +69,7 @@ let updateBG=document.querySelector("#all");
     updateBG.style.color= " #e0ebeb";
 
   }
-} */
-
-function Change_bg_sw(des){
-  let updateBG=document.querySelector("#all");
- switch(des){
-  case "rains":
-  case "light rain":
-    updateBG.style.background= "linear-gradient(180.3deg, rgb(110, 136, 161) 5.5%, rgb(221, 221, 221) 90.2%)";
-    updateBG.style.color= "#e0ebeb";
-    break;
-  case "clear sky":
-    updateBG.style.background= "linear-gradient(180.3deg, rgb(85, 88, 218) 0%, rgb(95, 209, 249) 100.2%)";
-    updateBG.style.color= "#e0ebeb";
-    break;
-  case "broken clouds":
-    updateBG.style.background= "linear-gradient(359.3deg,  rgba(187, 187, 187, 0) 1%, rgb(196, 214, 252) 70.9%)";
-    updateBG.style.color= " rgb(85, 88, 218)";
-    break;
-  case "shower rain":
-    updateBG.style.background= "linear-gradient(to bottom,  #304352 0%, #d7d2cc 100%)";
-      updateBG.style.color= " #e0ebeb";
-    break;
-  case "thunderstorm":
-    updateBG.style.background= "linear-gradient(to bottom, rgb(58, 28, 113), rgb(215, 109, 119), rgb(255, 175, 123))";
-      updateBG.style.color= " #e0ebeb";
-    break;
-  case "snow":
-  case "light snow":
-    updateBG.style.background= "linear-gradient(180.3deg, #D7FFFE 0%, #FFFEFF 100%)";
-    updateBG.style.color= " #407088";
-    break;
-  case "mist":
-    updateBG.style.background= "linear-gradient(180.3deg, rgb(216, 174, 211) 45.1%, rgb(145, 130, 196) 100.2%)";
-    updateBG.style.color= " #e0ebeb";
-
-  case"few clouds":
-    updateBG.style.background= "linear-gradient(-225deg, #5D9FFF 0%, #B8DCFF 48%, #6BBBFF 100%)";
-    updateBG.style.color= " #38598b";
-  case "scattered clouds":
-  case "overcast clouds":
-    updateBG.style.background= "background: radial-gradient(401px at 50.6% -0.3%, rgba(255, 255, 255, 0.31) 1.2%, rgb(36, 212, 219) 100.2%)";
-      updateBG.style.color= " #e0ebeb";
 }
-  }
 function formatDate(date){
   
   let hour=date.getHours();
