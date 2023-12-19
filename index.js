@@ -25,12 +25,12 @@ function UpdateWeather(response){
 function Change_bg(des){
   let updateBG=document.querySelector("#all");
 
-  if(des=="rains" || des=="light rain"){
+  if(des=="rains" ){
     updateBG.style.background= "linear-gradient(180.3deg, rgb(110, 136, 161) 5.5%, rgb(221, 221, 221) 90.2%)";
     updateBG.style.color= "#e0ebeb";
    
   }
-  else if (des=="clear sky"){
+  else if (des=="clear sky" || des=="light rain"){
     updateBG.style.background= "linear-gradient(180.3deg, rgb(85, 88, 218) 0%, rgb(95, 209, 249) 100.2%)";
     updateBG.style.color= "#e0ebeb";
   }
@@ -39,7 +39,7 @@ function Change_bg(des){
     updateBG.style.color= " rgb(85, 88, 218)";
   }
   else if (des=="scattered clouds" || des=="overcast clouds"){
-    updateBG.style.background= "linear-gradient(-225deg, #5D9FFF 0%, #B8DCFF 48%, #6BBBFF 100%); ";
+    updateBG.style.background= "background: linear-gradient(109.6deg, rgb(204, 228, 247) 11.2%, rgb(237, 246, 250) 100.2%); ";
      updateBG.style.color= " #e0ebeb";
     
   }
