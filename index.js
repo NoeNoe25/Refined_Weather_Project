@@ -113,13 +113,6 @@ function Change_bg_sw(des){
  }
    }
 
-
-
-
-
-
-
-
 function formatDate(date){
   
   let hour=date.getHours();
